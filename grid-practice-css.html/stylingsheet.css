@@ -1,0 +1,34 @@
+.div-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+ .image-preview{
+        width: 300px;
+        display: inline-block;
+        padding-top:20px ;
+        vertical-align:top ;
+    }
+    .search-bar{
+        display: block;
+        margin-bottom: 40px;
+    }
+    .image{
+        width:300px ;
+    }
+    .channel-picture{
+        width:40px ;
+        display: block;
+         
+    }
+    .picture-display{
+        width:40px ;
+        display:inline-block;
+    }
+    .image-info{
+        width:210px ;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .paragraph-detail{
+        margin-top: 0;
+    }

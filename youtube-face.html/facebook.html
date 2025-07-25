@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Youtube Practice</title>
+       <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+             column-gap: 20px;
+             margin-bottom: 40px;
+        }
+        .grid-item{
+            border: solid gray;
+            border: 1px;
+           
+        }
+        .thumbnail-one{
+            width: 100%;
+        }
+        .channel-picture{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+       }
+        .picture-display{
+           margin-right: 15px;
+           margin-top: 10px;
+        }
+        .picture-detail{
+            width: 45px;
+            border-radius: 30px;
+        }
+        .thumbnail-detail{
+            margin-top: 0;
+        }
+        .thumbnail-detail1{
+            
+        }
+        .header{
+         position:fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         height: 57px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom:1px solid rgb(222, 222, 222);
+         background-color: white;
+    
+        }
+        .left-section{
+         padding-left: 25px;
+        }
+        .middle-section{
+            display: flex;
+            flex-direction: row;
+        }
+        .right-section{
+          margin-right: 30px;
+          
+        }
+        .hamburger-icon{
+            width: 30px;
+            cursor: pointer;
+         
+        }
+        .youtube-logo{
+            width: 110px;
+            padding-left: 25px;
+            cursor: pointer;
+         
+        }
+        .search-bar{
+            width: 425px;
+            height: 41px;
+            font-size: 20px;
+            padding-left: 15px;
+            border:1px solid rgb(222, 222, 222);
+            margin-right: -1px;
+           
+        }
+        .search-icon-container{
+            height: 45px;
+            width: 80px;
+         border:1px solid rgb(222, 222, 222);
+         cursor: pointer;
+        
+        }
+        .search-icon{
+            
+            width: 28px;
+           padding-top: 8px;
+        }
+        .voice-button{
+            margin-left: 10px;
+            width: 45px;
+            border-radius: 30px;
+            background-color: rgb(248, 248, 248);
+            border: 0;
+             cursor: pointer;
+             margin-right: -40px;
+        }
+        .voice-search-icon{
+            width: 30px;
+             
+        }
+        .upload-icon{
+            width: 30px;
+            margin-right: 30px;
+            cursor: pointer;
+           
+        }
+        .apps-icon{
+            width: 30px;
+            margin-right: 30px;
+            cursor: pointer;
+           
+        }
+        .notification-icon{
+            width: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+           
+        }
+        .my-image{
+            width: 38px;
+            border-radius: 19px;
+            padding-top: 3px;
+            cursor: pointer;
+           
+        }
+           .sidebar{
+            position: fixed;
+            bottom: 0;
+            top: 50px;
+            left: 0;
+            width: 80px;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            
+        }
+        
+        .home-icon{
+            width: 30px;
+            display: block;
+            margin-top: 40px;
+             margin-bottom: 8px;
+        }
+        .home-details{
+            font-size: 12px;
+           
+        }
+        .explore-icon{
+            width: 30px;
+            display: block;
+            margin-top: -60px;
+            margin-left: 4px;
+            margin-bottom: 8px;
+        }
+        .explore-detail{
+          font-size: 12px;
+        }
+        .subscription-icon{
+            width: 30px;
+            display: block;
+             margin-top: -65px;
+            margin-left: 18px;
+            margin-bottom: 8px;
+
+        }
+        .subscriptions-detail{
+          font-size: 12px;
+
+        }
+        .originals-icon{
+            width: 30px;
+            display: block;
+                margin-top: -65px;
+            margin-left: 8px;
+            margin-bottom: 8px;
+        }
+        .originals-detail{
+          font-size: 12px;
+        }
+        .youtube-music-icon{
+            width: 30px;
+            display: block;
+           margin-top: -75px;
+            margin-left: 22px;
+            margin-bottom: 8px;
+        }
+        .music-icon{
+           font-size: 12px; 
+           margin-left: 10px;
+        }
+        .library-icon{
+            width: 30px;
+            display: block;
+             margin-top: -75px;
+        }
+        .library-detail{
+            font-size: 12px;
+        }
+       </style>   
+    
+    </head>
+    <body style="
+    margin-top: 100px;
+     margin-left: 120px;
+     font-family: Roboto, Arial, sans-serif;
+     
+    ">
+        <header class="header">
+            <div class="left-section">
+                <img class="hamburger-icon" src="hamburger-menu.svg">
+                <img class="youtube-logo" src="youtube-logo.svg">
+            </div>
+             <div class="middle-section">
+                <input class="search-bar" placeholder="Search">
+              <button class="search-icon-container">
+                <img class="search-icon" src="search.svg"></button>
+               <button class="voice-button">
+                 <img class="voice-search-icon" src="voice-search-icon.svg">
+                 </button>
+             </div>
+              <div class="right-section">
+                    <img class="upload-icon" src="upload.svg">
+                     <img class="apps-icon" src="youtube-apps.svg">
+                      <img class="notification-icon" src="notifications.svg">
+                       <img class="my-image" src="492128438_122124245750797799_2843777901737531711_n.jpg">
+              </div>
+        </header>
+        <nav class="sidebar">
+            <div>
+                <img class="home-icon" src="home.svg">
+                <span class="home-details">Home</span>
+            </div>
+            <div>
+                <img class="explore-icon" src="explore.svg">
+                <span class="explore-detail">Explore</span>
+            </div>
+            <div>
+                <img class="subscription-icon" src="subscriptions.svg">
+                <span class="subscriptions-detail">Subscription</span>
+            </div>
+            <div>
+                <img class="originals-icon" src="originals.svg">
+                <span class="originals-detail">Originals</span>
+            </div>
+            <div>
+                <img class="youtube-music-icon" src="youtube-music.svg"> 
+                <span class="music-icon">Youtube-music-icon</span>
+            </div>
+            <div>
+                <img class="library-icon" src="library.svg">
+                <span class="library-detail">Library</span>
+            </div>
+        </nav>
+        <main>
+            <section class="grid-container">
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-1.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-1.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-2.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-2.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views   - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-3.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-3.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-4.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-4.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+          </section>
+
+    
+<section class="grid-container">
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-5.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-5.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-6.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-6.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-7.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-7.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-8.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-8.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+          </section>
+
+          <section class="grid-container">
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-9.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-9.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-10.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-10.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-11.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-11.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <img class="thumbnail-one" src="thumbnail-12.webp" >
+                    <div class="channel-picture">
+                        <div class="picture-display">
+                            <img class="picture-detail" src="channel-12.jpeg">
+                           
+                        </div>
+                        <div class="thumbnail-detail">
+                             <p class="thumbnail-detail1">Talking Tech And AI With Google CEO Sundar Pichai!  </p>
+                             <p>Marques Browlee3.4m views - 6 months ago </p>
+                        </div>
+                    </div>
+                </div>
+          </section>
+            <p>
+                <label for="web-page">
+                   website:
+                </label>
+                <a href="\Forms/forms.html">please checkout our webpage on forms</a>
+            </p>
+        </main>
+    </body>
+</html>
